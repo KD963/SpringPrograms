@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+	<bean id="examobj" class="com.bridgelabz.object.Exam">
+	</bean>
+	<bean id="stud" class="com.bridgelabz.object.Student2">
+		<property name="id" value="123"></property>
+
+		<property name="exam1" ref="examobj">
+
+
+		</property>
+	</bean>
+
+	<bean id="anotherstud"
+		class=" com.bridgelabz.object.AnotherStudent">
+
+		<property name="exam2" ref="examobj"></property>
+	</bean>
+
+
+
+
+</beans>
